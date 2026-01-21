@@ -1,37 +1,58 @@
 # 🎓 Student Performance Prediction App
 
-A **Machine Learning–based Streamlit web application** that predicts a student's academic **Performance Index** using study habits, prior academic results, and lifestyle factors. The project demonstrates an **end‑to‑end ML workflow**: data analysis, model training, serialization, and cloud deployment.
+![Status](https://img.shields.io/badge/Status-Deployed%20%26%20Stable-brightgreen)
+![License](https://img.shields.io/badge/License-Academic-blue)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![ML](https://img.shields.io/badge/ML-scikit--learn-orange)
+![Deployment](https://img.shields.io/badge/Deployment-Streamlit%20Cloud-red)
 
 ---
 
-## 🚀 Live Demo
+## 🎯 Overview
 
-🔗 **Deployed App:** [https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app](https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app)
+**Student Performance Prediction App** is a machine‑learning–powered web application that predicts a student’s **Performance Index** based on study habits, academic history, and lifestyle factors. The project demonstrates a **complete ML lifecycle** — from data analysis and model training to deployment on **Streamlit Cloud**.
+
+This project is designed for **academic submission, internship evaluation, and portfolio demonstration**.
+
+---
+
+## 🚀 Live Application
+
+👉 **Deployed Streamlit App:**
+[https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app](https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app)
 
 ---
 
 ## 📌 Problem Statement
 
-Academic performance is influenced by multiple factors such as study time, previous scores, sleep habits, and extracurricular involvement. This project aims to **predict a continuous performance score (Performance Index)** for students based on these factors, helping identify performance levels and areas for improvement.
+Student academic performance depends on multiple factors such as:
+
+* Time spent studying
+* Previous academic results
+* Sleep patterns
+* Practice consistency
+* Extracurricular involvement
+
+This project aims to **predict a continuous Performance Index score** using these factors, enabling early performance assessment and data‑driven academic insights.
 
 ---
 
-## 🧠 Solution Overview
+## 🧠 Solution Summary
 
-* A **Linear Regression** model is trained on historical student data.
-* Input features are **standardized** using `StandardScaler`.
-* The trained model and scaler are saved as `.pkl` files.
-* A **Streamlit web interface** allows users to input student details and receive real-time predictions.
+* Performed **Exploratory Data Analysis (EDA)** on student performance data
+* Trained a **Linear Regression model** for continuous prediction
+* Applied **StandardScaler** for feature normalization
+* Serialized the trained model and scaler using `.pkl` files
+* Built an interactive **Streamlit UI** for real‑time predictions
+* Deployed the application on **Streamlit Cloud**
 
 ---
 
 ## 🧾 Input Features
 
-The model uses the following inputs:
-
 | Feature                          | Description                              |
 | -------------------------------- | ---------------------------------------- |
-| Hours Studied                    | Number of hours spent studying           |
+| Hours Studied                    | Daily study time                         |
 | Previous Scores                  | Past academic performance                |
 | Extracurricular Activities       | Participation outside academics (Yes/No) |
 | Sleep Hours                      | Average hours of sleep                   |
@@ -41,22 +62,50 @@ The model uses the following inputs:
 
 ## 📊 Output
 
-* **Performance Index**: A continuous numeric value estimating overall academic performance.
+### 🎯 Performance Index
+
+* A **continuous numeric score** predicting overall academic performance
 * Example output:
 
-  > *Predicted Performance Index: 56.05*
+```
+Predicted Performance Index: 56.05
+```
 
-This represents a **moderate performance level**, based on learned patterns from historical data.
+### Interpretation:
+
+* **40–55** → Low to moderate performance
+* **55–75** → Average performance
+* **75+** → High performance
 
 ---
 
-## 🛠 Tech Stack
+## 📈 Model Details
 
-* **Programming Language:** Python
-* **Web Framework:** Streamlit
-* **Machine Learning:** Scikit-learn
-* **Data Handling:** Pandas, NumPy
-* **Deployment:** Streamlit Cloud
+| Attribute         | Value             |
+| ----------------- | ----------------- |
+| Algorithm         | Linear Regression |
+| Target Variable   | Performance Index |
+| Feature Scaling   | StandardScaler    |
+| Model Persistence | Pickle (.pkl)     |
+
+### Evaluation Metrics Used
+
+* Mean Absolute Error (MAE)
+* Root Mean Squared Error (RMSE)
+* R² Score
+
+---
+
+## 🛠 Technology Stack
+
+| Category        | Tools           |
+| --------------- | --------------- |
+| Language        | Python          |
+| ML Library      | scikit-learn    |
+| Data Processing | pandas, numpy   |
+| Web Framework   | Streamlit       |
+| Deployment      | Streamlit Cloud |
+| Version Control | Git & GitHub    |
 
 ---
 
@@ -69,42 +118,28 @@ students_performance_model/
 ├── linear_regression_model.pkl    # Trained ML model
 ├── scaler.pkl                     # Feature scaler
 ├── requirements.txt               # Dependencies
-├── student.ipynb                  # Model training notebook
+├── student.ipynb                  # Training & EDA notebook
 └── Student_Performance.csv        # Dataset
 ```
 
 ---
 
-## 📈 Model Details
+## ▶️ Run Locally
 
-* **Algorithm:** Linear Regression
-* **Target Variable:** Performance Index
-* **Evaluation Metrics:**
-
-  * MAE (Mean Absolute Error)
-  * RMSE (Root Mean Squared Error)
-  * R² Score
-
-The model was selected based on its interpretability and suitability for continuous prediction tasks.
-
----
-
-## ▶️ How to Run Locally
-
-1. Clone the repository:
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/students_performance_model.git
 cd students_performance_model
 ```
 
-2. Install dependencies:
+### 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the Streamlit app:
+### 3️⃣ Run the App
 
 ```bash
 streamlit run app.py
@@ -114,29 +149,35 @@ streamlit run app.py
 
 ## ☁️ Deployment
 
-The application is deployed on **Streamlit Cloud** directly from the GitHub repository. Dependency management is handled via `requirements.txt`, ensuring compatibility with the trained model.
+* Platform: **Streamlit Cloud**
+* Deployment Method: Direct GitHub integration
+* Dependency management via `requirements.txt`
+* Model loaded using serialized `.pkl` artifacts
 
 ---
 
 ## 🎓 Learning Outcomes
 
-* End-to-end ML project implementation
-* Model serialization and reuse
-* Streamlit-based UI development
+* End‑to‑end machine learning pipeline
+* Model training and evaluation
+* Feature scaling and preprocessing
+* Streamlit UI development
 * Cloud deployment and dependency management
+* Debugging real‑world deployment issues
 
 ---
 
 ## 👤 Author
 
-**Abeeba Abee**
+**Ummu Abeeba**
+📧 Email: [abeeba2430@gmail.com](mailto:abeeba2430@gmail.com)
 
 ---
 
 ## 📜 License
 
-This project is for **educational and academic purposes**.
+This project is created for **educational and academic purposes**.
 
 ---
 
-⭐ *If you find this project useful, feel free to star the repository!*
+⭐ If you find this project useful, feel free to **star the repository** and try the live app!
