@@ -338,26 +338,39 @@ if model and scaler:
             ]
             
             fig = go.Figure(data=go.Scatterpolar(
-                r=values + [values[0]],
-                theta=categories + [categories[0]],
-                fill='toself',
-                fillcolor='rgba(99, 110, 250, 0.5)',
-                line=dict(color='rgb(99, 110, 250)', width=2)
-            ))
-            
-            fig.update_layout(
-                polar=dict(
-                    radialaxis=dict(visible=True, range=[0, 100], showticklabels=True, ticks=''),
-                    bgcolor='rgba(255, 255, 255, 0.1)'
-                ),
-                showlegend=False,
-                title="Your Performance Profile",
-                paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(0,0,0,0)',
-                font=dict(color='white', size=12),
-                height=400
-            )
-            
+    r=values + [values[0]],
+    theta=categories + [categories[0]],
+    fill='toself',
+    fillcolor='rgba(0, 0, 0, 0.15)',   # light black fill
+    marker=dict(color='black', size=8),  # POINTS BLACK
+    line=dict(color='black', width=3)    # LINES BLACK
+))
+
+fig.update_layout(
+    polar=dict(
+        radialaxis=dict(
+            visible=True,
+            range=[0, 100],
+            tickfont=dict(color='black'),
+            gridcolor='black'
+        ),
+        angularaxis=dict(
+            tickfont=dict(color='black'),
+            gridcolor='black'
+        ),
+        bgcolor='rgba(255,255,255,0.6)'
+    ),
+    title=dict(
+        text="Your Performance Profile",
+        font=dict(color='black', size=18)
+    ),
+    showlegend=False,
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='black'),
+    height=400
+)
+
             st.plotly_chart(fig, use_container_width=True)
         
         with col2:
