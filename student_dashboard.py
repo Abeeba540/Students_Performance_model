@@ -235,9 +235,10 @@ backdrop-filter: blur(12px);
 border-radius: 16px;
 padding: 20px;
 ">
+st.markdown("## 🎓 AI-Powered Student Performance Analyzer")
 """, unsafe_allow_html=True)
 
-st.markdown("## 🎓 AI-Powered Student Performance Analyzer")
+
 st.markdown("### Personalized Learning Insights & Recommendations")
 
 st.markdown("</div>", unsafe_allow_html=True)
