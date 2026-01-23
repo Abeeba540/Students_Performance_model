@@ -17,147 +17,46 @@ st.set_page_config(
 # Custom CSS for high-tech look
 st.markdown("""
 <style>
-    /* User-Friendly Color Palette - High Contrast + Eye Comfort */
     .main {
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #36d1dc 100%);
-        padding: 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-    
-    /* Card Improvements - Perfect Readability */
+    .stApp {
+        background: transparent;
+    }
     .metric-card {
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        padding: 25px;
-        border: 2px solid rgba(52, 152, 219, 0.3);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        margin: 10px 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     }
-    
-    /* Priority Color System - Instant Recognition */
     .recommendation-box {
-        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
-        border-radius: 15px;
-        padding: 20px;
-        margin: 15px 0;
-        color: white;
-        font-weight: 600;
-        border-left: 6px solid #c44569;
-        box-shadow: 0 5px 15px rgba(238, 90, 82, 0.3);
-    }
-    
-    .insight-box {
-        background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
-        border-radius: 15px;
-        padding: 20px;
-        margin: 15px 0;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
         color: white;
         font-weight: 500;
-        border-left: 6px solid #00a085;
-        box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
     }
-    
-    /* Typography - Perfect Readability */
+    .insight-box {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: white;
+    }
     h1, h2, h3 {
-        color: #2c3e50 !important;
-        font-weight: 700 !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    /* Metric Labels - Crystal Clear */
-    .stMetric > label {
-        color: #2c3e50 !important;
-        font-size: 14px !important;
-        font-weight: 600 !important;
-    }
-    
-    .stMetric > div > div > div {
-        color: #27ae60 !important;
-        font-size: 28px !important;
-        font-weight: 700 !important;
-    }
-    
-    /* Sidebar Improvements */
-    .css-1d391kg {
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 15px;
-        border: 1px solid rgba(52, 152, 219, 0.2);
-        padding: 20px;
-    }
-    
-    /* Input Fields - Professional Look */
-    .stSlider > div > div > div {
-        background: linear-gradient(90deg, #3498db, #2980b9) !important;
-    }
-    
-    /* Buttons - Stand Out */
-    .stButton > button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         color: white !important;
-        border-radius: 12px !important;
-        font-weight: 600 !important;
-        border: none !important;
-        padding: 12px 24px !important;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
     }
-    
-    .stButton > button:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+    .stMetric label {
+        color: white !important;
     }
-    
-    /* DataFrame - Clean Professional */
-    .dataframe {
-        background: white !important;
-        border-radius: 12px !important;
-        overflow: hidden !important;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
-    }
-    
-    /* Charts - Perfect Background */
-    .stPlotlyChart {
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-radius: 15px !important;
-        padding: 20px !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-    }
-    
-    /* Expander Headers */
-    .streamlit-expanderHeader {
-        font-weight: 600 !important;
-        color: #2c3e50 !important;
-        font-size: 16px !important;
-    }
-    
-    /* Success/Error Messages */
-    .stSuccess {
-        background: linear-gradient(135deg, #00b894, #00cec9) !important;
-        border-radius: 12px !important;
-        border-left: 5px solid #00a085 !important;
-    }
-    
-    .stInfo {
-        background: linear-gradient(135deg, #3498db, #2980b9) !important;
-        border-radius: 12px !important;
-        border-left: 5px solid #2980b9 !important;
+    .stMetric .css-1xarl3l {
+        color: white !important;
     }
 </style>
-
-
-/* Add this at end of CSS for mobile perfection */
-@media (max-width: 768px) {
-    .metric-card {
-        margin: 10px 5px !important;
-        padding: 20px 15px !important;
-    }
-    h1 {
-        font-size: 28px !important;
-    }
-    .stMetric > div > div > div {
-        font-size: 24px !important;
-    }
-}
-
+""", unsafe_allow_html=True)
 
 # Load model and scaler
 @st.cache_resource
