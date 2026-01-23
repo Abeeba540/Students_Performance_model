@@ -2,5 +2,4 @@ streamlit==1.53.0
 numpy
 pandas
 scikit-learn==1.6.1
-plotly.graph_objects 
-plotly.express
+
