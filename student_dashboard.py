@@ -500,5 +500,3 @@ else:
 
 
 
-
-insert those corrections in this code
