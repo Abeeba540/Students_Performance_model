@@ -260,7 +260,7 @@ with st.sidebar:
 
 # MAIN DASHBOARD - Only show when analyzed
 if st.session_state.get('analyzed', False):
-    status_text.text("✅ Analysis complete!")
+    status_text.text(" Analysis complete!")
     progress_bar.progress(100)
     
     with st.spinner("Generating your personalized plan..."):
@@ -284,7 +284,7 @@ if st.session_state.get('analyzed', False):
     
     with col2:
         st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        level = "🏆 Excellent" if prediction >= 85 else "✅ Good" if prediction >= 70 else "⚠️ Improve"
+        level = "🏆 Excellent" if prediction >= 85 else " Good" if prediction >= 70 else "⚠️ Improve"
         st.metric("📊 Performance", level)
         st.markdown('</div>', unsafe_allow_html=True)
     
@@ -311,7 +311,7 @@ if st.session_state.get('analyzed', False):
                 <h3 style="margin: 0 0 1rem 0;">{rec['category']}</h3>
                 <p style="font-size: 1.1rem; margin: 0.5rem 0;">{rec['message']}</p>
                 <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
-                    <strong>✅ Action Steps:</strong><br>{rec['action']}
+                    <strong> Action Steps:</strong><br>{rec['action']}
                 </div>
                 <div style="font-size: 1.2rem; font-weight: 700;">{rec['impact']}</div>
             </div>
