@@ -389,7 +389,7 @@ if model and scaler:
             
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
-                font={'color': "white", 'family': "Arial"},
+                font={'color': "black", 'family': "Arial"},
                 height=400
             )
             
