@@ -19,7 +19,7 @@ This project is designed for **academic submission, internship evaluation, and p
 ## 🚀 Live Application
 
 👉 **Deployed Streamlit App:**
-[[https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app](https://studentsperformancemodel-dswcyf8jsftkr9rjvf34jx.streamlit.app/#ai-powered-student-performance-analyzer)]([https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app](https://studentsperformancemodel-dswcyf8jsftkr9rjvf34jx.streamlit.app/#ai-powered-student-performance-analyzer))
+[[https://studentsperformancemodel-yrqk5zfpqvkpwi7rgff4gj.streamlit.app](https://studentsperformancemodel-dswcyf8jsftkr9rjvf34jx.streamlit.app/#ai-powered-student-performance-analyzer)]
 
 ---
 
