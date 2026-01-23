@@ -17,50 +17,58 @@ st.set_page_config(
 # Custom CSS for high-tech look
 st.markdown("""
 <style>
- [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+/* MAIN BACKGROUND */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
 }
 
+/* SIDEBAR */
 [data-testid="stSidebar"] {
-    background: linear-gradient(135deg, #1f2937, #111827);
+    background: linear-gradient(135deg, #020617, #020617);
 }
 
+/* HEADINGS */
 h1, h2, h3 {
-    color: white !important;
+    color: #ffffff !important;
+    font-weight: 700;
 }
 
-    .metric-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    }
-    .recommendation-box {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        border-radius: 10px;
-        padding: 15px;
-        margin: 10px 0;
-        color: white;
-        font-weight: 500;
-    }
-    .insight-box {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        border-radius: 10px;
-        padding: 15px;
-        margin: 10px 0;
-        color: white;
-    }
-    h1, h2, h3 {
-        color: white !important;
-    }
-    .stMetric label {
-        color: white !important;
-    }
-    .stMetric .css-1xarl3l {
-        color: white !important;
-    }
+/* NORMAL TEXT */
+p, span, li {
+    color: #e5e7eb;
+    font-size: 15px;
+}
+
+/* METRICS */
+[data-testid="stMetricValue"] {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #c7d2fe !important;
+}
+
+/* INSIGHT BOX */
+.insight-box {
+    background: rgba(14, 165, 233, 0.18);
+    border-left: 4px solid #0ea5e9;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    color: #e0f2fe;
+}
+
+/* RECOMMENDATION BOX */
+.recommendation-box {
+    background: rgba(244, 114, 182, 0.18);
+    border-left: 4px solid #f472b6;
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: #fce7f3;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
