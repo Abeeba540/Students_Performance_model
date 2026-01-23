@@ -17,18 +17,12 @@ st.set_page_config(
 # Custom CSS for high-tech look
 st.markdown("""
 <style>
- [data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-[data-testid="stSidebar"] {
-    background: linear-gradient(135deg, #1f2937, #111827);
-}
-
-h1, h2, h3 {
-    color: white !important;
-}
-
+    .main {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .stApp {
+        background: transparent;
+    }
     .metric-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
@@ -228,20 +222,7 @@ class StudyAdvisor:
         }
 
 # Header
-st.markdown("""
-<div style="
-background: rgba(255,255,255,0.12);
-backdrop-filter: blur(12px);
-border-radius: 16px;
-padding: 20px;
-">
-""", unsafe_allow_html=True)
-
-st.markdown("## 🎓 AI-Powered Student Performance Analyzer")
-st.markdown("### Personalized Learning Insights & Recommendations")
-
-st.markdown("</div>", unsafe_allow_html=True)
-
+st.title("🎓 AI-Powered Student Performance Analyzer")
 st.markdown("### Personalized Learning Insights & Recommendations")
 
 # Sidebar for inputs
@@ -497,4 +478,3 @@ if model and scaler:
 else:
     st.error("Unable to load the model. Please check if model files exist in the directory.")
     st.info("Required files: linear_regression_model.pkl, scaler.pkl")
-
