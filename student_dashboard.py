@@ -17,61 +17,52 @@ st.set_page_config(
 # Custom CSS for high-tech look
 st.markdown("""
 <style>
-
-/* MAIN APP BACKGROUND – darker & calmer */
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+ [data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* SIDEBAR */
 [data-testid="stSidebar"] {
-    background: linear-gradient(135deg, #020617, #020617);
+    background: linear-gradient(135deg, #1f2937, #111827);
 }
 
-/* HEADINGS */
 h1, h2, h3 {
-    color: #ffffff !important;
-    font-weight: 700;
+    color: white !important;
 }
 
-/* NORMAL TEXT */
-p, span, li {
-    color: #e5e7eb;
-    font-size: 15px;
-}
-
-/* METRICS */
-[data-testid="stMetricValue"] {
-    color: #ffffff !important;
-    font-weight: 700;
-}
-
-[data-testid="stMetricLabel"] {
-    color: #c7d2fe !important;
-}
-
-/* INSIGHT BOX – calmer teal (NOT bright cyan) */
-.insight-box {
-    background: rgba(14, 165, 233, 0.18);
-    border-left: 4px solid #0ea5e9;
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin: 10px 0;
-    color: #e0f2fe;
-}
-
-/* RECOMMENDATION BOX – softer pink */
-.recommendation-box {
-    background: rgba(244, 114, 182, 0.18);
-    border-left: 4px solid #f472b6;
-    border-radius: 12px;
-    padding: 14px 18px;
-    color: #fce7f3;
-}
-
+    .metric-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    .recommendation-box {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: white;
+        font-weight: 500;
+    }
+    .insight-box {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+        color: white;
+    }
+    h1, h2, h3 {
+        color: white !important;
+    }
+    .stMetric label {
+        color: white !important;
+    }
+    .stMetric .css-1xarl3l {
+        color: white !important;
+    }
 </style>
 """, unsafe_allow_html=True)
-
 
 # Load model and scaler
 @st.cache_resource
@@ -251,6 +242,7 @@ st.markdown("### Personalized Learning Insights & Recommendations")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
+st.markdown("### Personalized Learning Insights & Recommendations")
 
 # Sidebar for inputs
 with st.sidebar:
@@ -354,8 +346,8 @@ if model and scaler:
                 showlegend=False,
                 title="Your Performance Profile",
                 paper_bgcolor='rgba(0,0,0,0)',
-                plot_bgcolor='rgba(15,23,42,0.6)',
-                font=dict(color='#e5e7eb'),
+                plot_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='white', size=12),
                 height=400
             )
             
@@ -485,8 +477,8 @@ if model and scaler:
             xaxis_title="Timeline",
             yaxis_title="Performance Score",
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(15,23,42,0.6)',
-            font=dict(color='#e5e7eb'),
+            plot_bgcolor='rgba(255,255,255,0.1)',
+            font=dict(color='white'),
             height=400,
             hovermode='x unified'
         )
@@ -508,3 +500,5 @@ else:
 
 
 
+
+insert those corrections in this code
