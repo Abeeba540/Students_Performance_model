@@ -36,7 +36,7 @@ st.markdown("""
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        color: black !important;
+        color: black !important;  /* FIXED: Black text */
         font-weight: 500;
     }
     .insight-box {
@@ -44,50 +44,29 @@ st.markdown("""
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        color: black !important;
+        color: black !important;  /* FIXED: Black text */
     }
     h1, h2, h3 {
-        color: black !important;
+        color: black !important;  /* FIXED: Black headers */
     }
     .stMetric label {
-        color: black !important;
+        color: black !important;  /* FIXED: Metric labels */
     }
     .stMetric .css-1xarl3l {
+        color: black !important;  /* FIXED: Metric values */
+    }
+    /* FIXED: All text elements */
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, 
+    .stMarkdown p, .stMarkdown li, .stMarkdown td {
         color: black !important;
     }
-    .stMetric .stMetricValue {
-        color: black !important;
-    }
-    /* Fix ALL text elements */
-    .stMarkdown, .stText, p, div, span, li {
-        color: black !important;
-    }
-    /* Sidebar text */
+    /* FIXED: Sidebar text */
     .css-1d391kg {
         color: black !important;
     }
-    /* Button text */
-    .stButton > button {
-        color: black !important;
-        background: rgba(255,255,255,0.9) !important;
-    }
-    /* Slider labels */
-    .stSlider label {
-        color: black !important;
-    }
-    /* Expander text */
-    .streamlit-expanderHeader {
-        color: black !important;
-    }
-    /* Dataframe headers */
-    .dataframe thead th {
-        color: black !important;
-        background-color: rgba(255,255,255,0.8) !important;
-    }
-    /* Dataframe cells */
+    /* FIXED: Dataframe text */
     .dataframe tbody td {
         color: black !important;
-        background-color: rgba(255,255,255,0.7) !important;
     }
 </style>
 """, unsafe_allow_html=True)
