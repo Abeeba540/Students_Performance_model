@@ -18,21 +18,24 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-color: #2f2f2f;
     }
     .stApp {
-        background: transparent;
+        background: #2f2f2f;
+    }
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #4a4a4a 0%, #2f2f2f 100%);
     }
     .metric-card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.08);
         backdrop-filter: blur(10px);
         border-radius: 15px;
         padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
     }
     .recommendation-box {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        background: linear-gradient(135deg, #5e5e5e 0%, #3d3d3d 100%);
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
@@ -40,7 +43,7 @@ st.markdown("""
         font-weight: 500;
     }
     .insight-box {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        background: linear-gradient(135deg, #5e5e5e 0%, #3d3d3d 100%);
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
@@ -57,6 +60,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 # Load model and scaler
 @st.cache_resource
