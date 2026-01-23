@@ -14,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for high-tech look
+# Custom CSS - BLACK TEXT FOR PERFECT VISIBILITY
 st.markdown("""
 <style>
     .main {
@@ -36,7 +36,7 @@ st.markdown("""
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        color: white;
+        color: black !important;
         font-weight: 500;
     }
     .insight-box {
@@ -44,16 +44,50 @@ st.markdown("""
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        color: white;
+        color: black !important;
     }
     h1, h2, h3 {
-        color: white !important;
+        color: black !important;
     }
     .stMetric label {
-        color: white !important;
+        color: black !important;
     }
     .stMetric .css-1xarl3l {
-        color: white !important;
+        color: black !important;
+    }
+    .stMetric .stMetricValue {
+        color: black !important;
+    }
+    /* Fix ALL text elements */
+    .stMarkdown, .stText, p, div, span, li {
+        color: black !important;
+    }
+    /* Sidebar text */
+    .css-1d391kg {
+        color: black !important;
+    }
+    /* Button text */
+    .stButton > button {
+        color: black !important;
+        background: rgba(255,255,255,0.9) !important;
+    }
+    /* Slider labels */
+    .stSlider label {
+        color: black !important;
+    }
+    /* Expander text */
+    .streamlit-expanderHeader {
+        color: black !important;
+    }
+    /* Dataframe headers */
+    .dataframe thead th {
+        color: black !important;
+        background-color: rgba(255,255,255,0.8) !important;
+    }
+    /* Dataframe cells */
+    .dataframe tbody td {
+        color: black !important;
+        background-color: rgba(255,255,255,0.7) !important;
     }
 </style>
 """, unsafe_allow_html=True)
