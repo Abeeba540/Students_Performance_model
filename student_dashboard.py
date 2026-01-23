@@ -348,8 +348,9 @@ if model and scaler:
             
             fig.update_layout(
                 polar=dict(
-                    radialaxis=dict(visible=True, range=[0, 100], showticklabels=True, ticks=''),
-                    bgcolor='rgba(255, 255, 255, 0.1)'
+                    radialaxis=dict(visible=True, range=[0, 100], showticklabels=True, ticks='', tickfont=dict(color="black"), gridcolor='black'),
+                    angularaxis=dict(tickfont=dict(color="black"), gridcolor='black'),
+                    bgcolor='rgba(255, 255, 255, 0.6)'
                 ),
                 showlegend=False,
                 title="Your Performance Profile",
