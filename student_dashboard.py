@@ -367,7 +367,7 @@ if model and scaler:
             fig = go.Figure(go.Indicator(
                 mode="gauge+number+delta",
                 value=prediction,
-                number={'font':{'color:'black','size':44}},
+                number={'font':{'color':'black','size': 44}},
                 delta={'reference': previous_scores, 'increasing': {'color': "green"}},
                 title={'text': "Performance Index", 'font': {'color': 'black', 'size': 20}},
                 gauge={
