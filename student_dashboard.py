@@ -71,6 +71,19 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+    [data-testid="stAppViewContainer"] {
+        background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 50%, #d0d0d0 100%);
+    }
+    .main .block-container {
+        background: transparent;
+        padding-top: 1rem;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
 # Load model and scaler
 @st.cache_resource
 def load_model():
