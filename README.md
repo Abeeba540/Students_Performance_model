@@ -79,20 +79,17 @@ Predicted Performance Index: 56.05
 
 ---
 
-## 📈 Model Details
+## 📈 Model Performance
 
-| Attribute         | Value             |
-| ----------------- | ----------------- |
-| Algorithm         | Linear Regression |
-| Target Variable   | Performance Index |
-| Feature Scaling   | StandardScaler    |
-| Model Persistence | Pickle (.pkl)     |
+The trained Linear Regression model was evaluated using standard regression metrics to assess accuracy and reliability.
 
-### Evaluation Metrics Used
+- **R² Score:** **0.986 (98.6%)**
+- **Root Mean Squared Error (RMSE):** **2.01**
+- **Mean Absolute Error (MAE):** **≈ 1.6**
 
-* Mean Absolute Error (MAE)
-* Root Mean Squared Error (RMSE)
-* R² Score
+### Interpretation
+- An R² score of **98.6%** indicates that the model explains nearly all the variance in student performance.
+- Low RMSE and MAE values confirm minimal prediction error and strong model generalization.
 
 ---
 
